@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumindo API</title>
+</head>
+<body>
+  <main><ul></ul></main>
+</body>
+
+<script>
+  // Esse script seria o server.js do frontend.
+  // npx lite-server - para rodar o frontend.
+
+  async function getContent() {
+    try {
+      const resposne = await fetch('http://localhost:4567/')  // Fetch é uma API do próprio navegador.
+      
+      const data = await resposne.json()
+      show(data)
+
+    } catch (error) {
+      console.log(error)
+    }
+    
+  }
+  
+
+  function show(users) {
+    let output = ''
+
+    for (let user of users) {
+      output += `<li>${user.name}</li>`
+    }
+
+    document.querySelector('ul').innerHTML = output
+  }
+
+
+  getContent()
+
+
+</script>
+</html>
