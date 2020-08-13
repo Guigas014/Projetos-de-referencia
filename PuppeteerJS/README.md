@@ -22,5 +22,5 @@ Puxar últimas imagens do instagram, para adicionar na nossa página web.
 
 ## Next level
 
-- [] Fazer uns dos casos de uso acima
+- [ ] Fazer uns dos casos de uso acima
 - [x] Fazer o download de imagens e deixar em uma pasta temporária
