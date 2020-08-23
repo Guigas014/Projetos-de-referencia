@@ -31,7 +31,7 @@
     let output = ''
 
     for (let user of users) {
-      output += `<li>${user.name}</li>`
+      output += `<li>${user.name} - ${user.username}</li>`
     }
 
     document.querySelector('ul').innerHTML = output
