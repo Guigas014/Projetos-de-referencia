@@ -33,9 +33,21 @@ main {
   width: 90vw;
 }
 
-button {
-  width: 100%;
+.containerButton {
+  display: flex;
+  flex-direction: row;
+}
 
+a {
+  /*Primeiro top e bottom Segundo left e right*/
+  padding: 4% 30%;
+  
+  text-decoration: none;
+  color: var(--white);
+}
+
+button {
+  width: 50%;
   color: var(--white);
 
   border: none;
