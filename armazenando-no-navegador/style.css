@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 
-*, button, input {
+*, button, input, h1, p {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -38,13 +38,6 @@ main {
   flex-direction: row;
 }
 
-a {
-  /*Primeiro top e bottom Segundo left e right*/
-  padding: 4% 30%;
-  
-  text-decoration: none;
-  color: var(--white);
-}
 
 button {
   width: 50%;
@@ -98,3 +91,57 @@ img {
   object-fit: cover;
 }
 
+
+/*CSS da página lista.html*/
+a {
+  /*Primeiro top e bottom Segundo left e right*/
+  padding: 4% 30%;
+  
+  text-decoration: none;
+  color: var(--white);
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700; 
+
+  padding: 1.6rem;
+  text-align: center;
+
+  color: var(--white);
+}
+
+p {
+  position:relative;  
+  text-align: center;
+  padding: 10%;
+
+  font-size: 1.5rem;
+  font-weight: 400px;
+}
+
+.shadow { display: none; }
+
+.all-images {
+  padding: 2%;
+}
+
+li {
+  list-style: none;
+
+  position: relative;
+  padding-bottom: 2%;
+}
+
+.delete:hover::after {
+  content: "✕";
+  color: var(--primary);
+
+  position: absolute;
+  top: 0px;
+  right: 8px;
+
+  font-size: 3.2rem;
+
+}
