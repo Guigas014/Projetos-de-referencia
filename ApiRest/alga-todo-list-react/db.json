@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "title": "Wash my car",
+      "done": true,
+      "id": 1
+    },
+    {
+      "title": "Sleep right now",
+      "done": false,
+      "id": 2
+    },
+    {
+      "title": "Buy some coffee",
+      "done": false,
+      "id": 3
+    },
+    {
+      "title": "New task",
+      "done": true,
+      "id": 4
+    },
+    {
+      "title": "Other new task",
+      "done": false,
+      "id": 5
+    }
+  ]
+}
