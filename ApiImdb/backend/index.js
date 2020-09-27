@@ -1,57 +1,38 @@
-const puppeteer = require('puppeteer')
-
+const search = require('./search')
+const list = require('./list')
 
 // Nome do filme que será pesquisado
 const movieName = 'jumanji'
 
 
-// função que pesquisa o filme
-async function searchMovie() {
-  const browser = await puppeteer.launch()
-  const page = await browser.newPage()
-  await page.goto(`https://www.imdb.com/find?q=${movieName}`)
-  // await page.goto('https://www.imdb.com/title/tt2283362/?ref_=fn_al_tt_1')
- 
+// Chama o arquivo de pesquisa.
+// const hasTitle = async () => {
+//   const title = await search.searchMovie(movieName)
+//   console.log(title)
   
-  // Validar a página buscando o valor 'Title'
-  const title = await page.evaluate(() => {
-    
-    //VALIDAÇÃO...
-    title = document.querySelector('.originalTitle')
-    
-        
-    
-  })
-  
-  
-  console.log('Fechou!')
-  await browser.close()
-  // return title
-}
+// }
+// hasTitle()
 
 
-function verification(title) {
-  // Testar se está na página dos filmes relacionados a pesquisa (lista)
-  if (title == null) {
+
+// Testa se existe mais de um titulo na pesquisa. Se title é null.
+async function verifyTitle() {
+  if (await search.searchMovie(movieName) == null) {
     createPageList()
   } 
   else {
     createPageMovie()
-  }
+  }  
 }
 
-
-
-searchMovie()
-verification()
-
-
+verifyTitle()
 
 
 
 // Criar a página dos filmes relacionados a pesquisa
 function createPageList() {
   console.log('OK')
+  list.listSearch(movieName)
  
 }
 
