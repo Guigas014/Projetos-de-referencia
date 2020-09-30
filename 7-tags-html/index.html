@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7 Tags HTML</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.10/tailwind.min.css" />
+</head>
+
+<body>
+<main class="bg-purple-100 min-h-screen">
+
+  <h1 class="shadow mb-4 
+             text-lg 
+             text-center 
+             p-2 
+             bg-white 
+             text-purple-700
+             font-extrabold">
+    
+    <!-- title here -->
+    7+ Tags HTML que Você Precisa Conhecer
+	
+  </h1>
+
+  <section class="p-4">
+	
+    <h4 class="text-lg text-purple-700 p-2">1 Details</h4>
+     
+    <details>
+      <summary class="text-purple-900">Conheça os criadores</summary>
+      <section class="ml-4">
+        <div>Cleiton Souza <small class="text-purple-700">COO</small></div>
+        <div>Diego Fernandes <small class="text-purple-700">CTO</small></div>
+        <div>Robson Marques <small class="text-purple-700">CEO</small></div>
+      </section>
+    </details>
+
+    <br><hr>
+
+    <h4 class="text-lg text-purple-700 p-2">2 Datalist</h4>
+
+    <label for="weekday" class="text-purple-600 mr-2">Selecione o dia</label>
+    <input list="weekdays" name="weekday" id="weekday"                                           class="text-purple-800 pl-2 rounded shadow text-sm">
+      
+      <datalist id="weekdays">
+        <option value="Domingo">
+        <option value="Segunda">
+        <option value="Terça">
+        <option value="Quarta">
+        <option value="Quinta">
+        <option value="Sexta">
+        <option value="Sábado">
+      </datalist>
+
+    <br><br><hr>
+
+    <h4 class="text-lg text-purple-700 p-2">3 Content Editable</h4>
+
+    <label class="text-purple-600 mr-2"> Tarefas Diárias </label>
+    
+    <ul contenteditable class="text-sm ml-2">
+     <li> 1. Criar vídeos CodeDrops </li>
+      <li> 2. Criar vídeo para o curso </li>
+      <li> 3. Estudar </li>
+    </ul> 
+
+    <br><hr>
+  
+    <h4 class="text-lg text-purple-700 p-2">4 Mark</h4>
+
+      <p> Você vai aprender <mark>até o final da sua jornada</mark> 
+        e mesmo assim, terá muito pra aprender.
+      </p>
+
+    <br><hr>
+
+    <h4 class="text-lg text-purple-700 p-2">5 Optgroup</h4>
+
+    <label for="avaiable" class="mr-2">Em cartaz</label>
+    <select id="avaiable" name="avaiable" class="shadow bg-white"> 
+      <optgroup label="19h00"> 
+        <option value="1">Titanic</option> 
+        <option value="2">Moulin Rouge</option> 
+        <option value="3">Cidade de Deus</option>
+      </optgroup>
+      <optgroup label="20h00">
+        <option value="4">O Senhor dos Anéis</option> 
+        <option value="5">Batman</option> 
+    </optgroup> 
+    </select>
+  
+    <br><br><hr>
+
+    <h4 class="text-lg text-purple-700 p-2">6 Progress</h4>
+
+      <progress id="bar" value="0"  max="100">Progress: 50%</progress>
+
+    <br><br><hr>
+
+    <h4 class="text-lg text-purple-700 p-2">7 inputs</h4>
+
+    <div class="p-4 bg-purple-600 text-white flex">
+      <label for="volume" class="mr-4">Range</label>
+      <input type="range" id="volume" name="volume"
+         min="0" max="10">
+    </div>
+
+    <div class="p-4 bg-purple-100 text-purple-900 flex">
+      <label for="when" class="mr-4">Date</label>
+      <input type="date" id="when" name="trip-start"
+       value="2020-09-22"
+       min="2020-10-22" max="2020-12-22">
+    </div>
+
+    <div class="p-4 bg-purple-600 text-white flex">
+      <label for="color" class="mr-4">Color</label>
+      <input type="color" id="color" name="color">
+    </div>
+
+    <div class="p-4 bg-purple-100 text-purple-900 flex">
+      <label for="hour" class="mr-4">Time</label>
+      <input type="time" id="hour" name="hour"
+       value="22:00">
+    </div>
+
+    <br><br><hr>
+
+
+  </section>
+  
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
