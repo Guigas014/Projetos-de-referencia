@@ -1,8 +1,19 @@
 const search = require('./search')
 const list = require('./list')
 
-// Nome do filme que será pesquisado
-const movieName = 'jumanji'
+module.exports = {
+  // Nome do filme que será pesquisado
+  getData(req, res) {
+   const movieName = req.query.name 
+
+   return res.json({message: movieName})
+  } 
+}
+ 
+
+
+//const movieName = name
+//const movieName = 'jumanji'
 
 
 // Chama o arquivo de pesquisa.
@@ -16,7 +27,7 @@ const movieName = 'jumanji'
 
 
 // Testa se existe mais de um titulo na pesquisa. Se title é null.
-async function verifyTitle() {
+async function verifyTitle(movieName) {
   if (await search.searchMovie(movieName) == null) {
     createPageList()
   } 
@@ -25,7 +36,7 @@ async function verifyTitle() {
   }  
 }
 
-verifyTitle()
+//verifyTitle()
 
 
 
