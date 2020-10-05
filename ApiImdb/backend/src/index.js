@@ -1,28 +1,28 @@
-const search = require('./search')
-const list = require('./list')
+const search = require('./controller/searchController.js')
+const list = require('./controller/listController.js')
 
 module.exports = {
   // Nome do filme que será pesquisado
   getData(req, res) {
-   const movieName = req.query.name 
+   const searchName = req.query.name 
 
-   return res.json({message: movieName})
+   return res.json({ movie: searchName })
   } 
 }
  
 
 
-//const movieName = name
+//const movieName = searchName
 //const movieName = 'jumanji'
 
 
-// Chama o arquivo de pesquisa.
-// const hasTitle = async () => {
-//   const title = await search.searchMovie(movieName)
-//   console.log(title)
+ //Chama o arquivo de pesquisa.
+/* const hasTitle = async () => {*/
+   //const title = await search.searchMovie(movieName)
+   //console.log(title)
   
-// }
-// hasTitle()
+ //}
+ //hasTitle()
 
 
 

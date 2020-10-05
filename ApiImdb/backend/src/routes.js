@@ -1,5 +1,5 @@
 const express = require('express')
-const index = require('./index')
+const index = require('./index.js')
 
 const routes = express.Router()
 
