@@ -26,21 +26,20 @@ module.exports = {
             const dataArray = [ ...data ]
             const linkList = dataArray.map( ({ href }) => ( href ))
             const nameList = dataArray.map( ({ innerText }) => ( innerText ))
+            const length = dataArray.length
+           
+            const list = [length, nameList, linkList]
             
-            
-            // const length = nameArray.length
-            
-            
-            return nameList
+            return list 
         });
         
 
         console.log('Fechou01!')
         await browser.close()
         
-        console.log(movieList)
+        //console.log(movieList)
         
-        // return title
+         return movieList 
         }
 }
 

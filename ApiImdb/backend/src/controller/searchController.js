@@ -7,23 +7,22 @@ module.exports = {
   async searchMovie(movieName) {
     const browser = await puppeteer.launch()
     const page = await browser.newPage()
-    await page.goto(`https://www.imdb.com/find?q=${movieName}`)
-    // await page.goto('https://www.imdb.com/title/tt2283362/?ref_=fn_al_tt_1')
+    await page.goto(`${movieName}`)
   
     
     // Validar a página buscando o valor 'Title'
-    const title = await page.evaluate(() => {
+    const data = await page.evaluate(() => {
       
-      title = document.querySelector('.originalTitle')
-      
-      return title    //Esse retorno é obrigatório!!!!
+      const teste = document.querySelector('.title_wrapper').textContent
+
+      return teste    //Esse retorno é obrigatório!!!!
     });
     
     
-    console.log('Fechou!')
+    console.log('Fechou02')
     await browser.close()
     
-    return title
+    return data
   }
   
 }

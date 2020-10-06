@@ -11,6 +11,7 @@ const routes = express.Router()
 //})
 
 routes.get('/', index.getData)
+routes.get('/list', index.getMovie)
 
 module.exports = routes
 
