@@ -10,7 +10,7 @@ document.getElementById('searchButton')
   const name = document.querySelector('input').value
    
   //const api = await fetch(`http://localhost:3001/?name=${name}`)
-  const api = await fetch(`${uri}/?name=${name}`)
+  const api = await fetch(`${uri}/${name}`)
   const response = await api.json()
   //(`/?name=${name}`)
 

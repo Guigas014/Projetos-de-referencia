@@ -13,9 +13,39 @@ module.exports = {
     // Validar a página buscando o valor 'Title'
     const data = await page.evaluate(() => {
       
-      const teste = document.querySelector('.title_wrapper').textContent
+      const rate = document.querySelector('.ratingValue span')
 
-      return teste    //Esse retorno é obrigatório!!!!
+      const image = document.querySelector('.poster img').src
+      
+      const datas = document.querySelector('.title_wrapper').childNodes
+
+      const array = [ ...datas ]
+      const movie = array.map(({ innerText }) => ( innerText ))
+      
+      //Tira os itens vazios do array.
+      movie.map((item , index) => {
+        if (item == null) {
+          movie.splice(index, 1)
+        }
+      })
+
+      //Cria array com outros dados
+      const others = movie[2].replace(/ /g, "").split("|")
+      
+      // Criando array com todo o conteúdo.
+      const dataMovie = {
+        title: movie[0],
+        originalTitle: movie[1],
+        time: others[1],
+        genres: others[2],
+        certificate: others[0],
+        rate: rate.innerText,
+        image,
+        uri: rate.baseURI,
+      } 
+
+
+      return dataMovie    //Esse retorno é obrigatório!!!!
     });
     
     

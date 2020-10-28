@@ -5,12 +5,15 @@ module.exports = {
   
   // Busca a lista de filmes relacionados com a pesquisa.
   async getData(req, res) {
-    const searchName = req.query.name 
+    //const searchName = req.query.name 
+
+    const  { movie }= req.params
+    console.log(movie)
 
     //const hasTitle = await search.searchMovie(searchName) 
-    const movies = await list.listSearch(searchName) 
+    const movies = await list.listSearch(movie) 
       
-    return res.json( movies )
+    return res.json(movies)
   }, 
 
 

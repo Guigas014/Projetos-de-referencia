@@ -22,15 +22,39 @@ module.exports = {
             // const nameList = nameArray.map( ({ innerText }) => ( innerText ))
             
             //Busca os links e nomes dos filmes listados
-            const data = document.querySelectorAll('.result_text a')
-            const dataArray = [ ...data ]
-            const linkList = dataArray.map( ({ href }) => ( href ))
-            const nameList = dataArray.map( ({ innerText }) => ( innerText ))
-            const length = dataArray.length
+            const dataLink = document.querySelectorAll('.result_text a')
+            const dataImage = document.querySelectorAll('.primary_photo img')
+
+            const dataName = document.querySelectorAll('.findSection')[0].childNodes[3].childNodes[1].childNodes
+          
+            //Lista os nomes
+            const arrayName = [ ...dataName ]
+            const nameList = arrayName.map(({ innerText }) => ( 
+              innerText.replace(/\t/g, "")
+            ))
+            const length =arrayName.length 
+          
+            //Lista os links
+            const arrayLink = [ ...dataLink ]
+            let linkList = [] 
+
+            for (let i = 0; i < length; i++) {
+              linkList.push(arrayLink[i].href)
+            }
+
+            //Lista as imagens
+            const arrayImage = [ ...dataImage ]
+            let imageList = []
+
+            for (let i = 0; i < length; i++) {
+              imageList.push(arrayImage[i].src)
+            }
+
+
            
-            const list = [length, nameList, linkList]
+            const list = [length, nameList, linkList, imageList]
             
-            return list 
+            return list
         });
         
 
