@@ -5,9 +5,9 @@ module.exports = {
   
   // Busca a lista de filmes relacionados com a pesquisa.
   async getData(req, res) {
-    //const searchName = req.query.name 
+    const movie = req.query.name 
 
-    const  { movie }= req.params
+    //const  { movie }= req.params
     console.log(movie)
 
     //const hasTitle = await search.searchMovie(searchName) 
@@ -20,6 +20,7 @@ module.exports = {
   // Busca os dados do filme selecionado na lista.
    async getMovie(req, res) {
     const link = req.query.link
+    //const { link } = req.params
 
     const  dataMovie  = await search.searchMovie(link) 
 
