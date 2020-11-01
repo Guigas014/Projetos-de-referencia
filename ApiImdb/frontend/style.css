@@ -20,14 +20,17 @@ body {
 
   display: flex;
   flex-direction: column;
-  
+
   background-color: var(--black);
   color: var(--white);
 }
 
 main {
-  margin: 50px auto;
-  
+  margin: auto;
+  width: 90vw;
+  height: 90vh;
+  /*display: flex;*/
+  /*flex-direction: column;*/
 }
 
 h3 {
@@ -37,7 +40,11 @@ h3 {
 
 .search {
   width: 60vw;
+  margin: auto;
+  margin-bottom: 90px;
+
   display: flex;
+  flex-direction: row;
 }
 
 input {
@@ -80,8 +87,71 @@ button:hover {
   background-color: var(--primary);
 }
 
-img {
+.icon {
   width: 30px;
   height: 30px;
   object-fit: cover;
 }
+
+.title {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--primary-dark);
+
+  width: 70vw;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+ul {
+  width: 70vw;
+  height: 60vh;
+  margin: auto;
+  /*margin-bottom: 80px;*/
+}
+
+li {
+  list-style: none;
+  
+  /*width: 50vw;*/
+  margin: auto; 
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+.select {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--white);
+
+  margin-left: 10px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.select:hover {
+  color: var(--black);
+}
+
+.folder {
+  width: 32px;
+  height: 44px;
+  object-fit: cover;
+}
+
+.dataMovie {
+  width: 70vw;
+  height: 60vh;
+  margin: auto;
+  
+}
+
+
+
+.shadow { display: none; }
+
