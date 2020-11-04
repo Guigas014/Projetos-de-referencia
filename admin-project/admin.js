@@ -63,7 +63,7 @@ server.use(adminBroOptions.options.rootPath, router);
 
 // RunApp
 const run = async () => {
-  await mongoose.connect("mongodb+srv://guilherme:guilherme@cluster0.welac.mongodb.net/adminbroapp?retryWrites=true&w=majority", {
+  await mongoose.connect("URL do mongoDB Atlas", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
