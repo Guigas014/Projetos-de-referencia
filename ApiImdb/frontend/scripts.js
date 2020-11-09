@@ -4,7 +4,7 @@
 import uri from './api.js'
 
 
-document.getElementById('searchButton')
+document.getElementById('search-button')
   .onclick = async function getContent() {
 
   const name = document.querySelector('input').value

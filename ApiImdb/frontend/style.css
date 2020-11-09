@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
+
+/*Global ============================ */
 :root {
   --black: #130f0ddd;
   --primary: #3ce027;
@@ -38,6 +40,8 @@ h3 {
   margin: 20px;
 }
 
+
+/*Pesquisa =========================================== */
 .search {
   width: 60vw;
   margin: auto;
@@ -91,6 +95,7 @@ button:hover {
   width: 30px;
   height: 30px;
   object-fit: cover;
+  float: center;
 }
 
 @keyframes load {
@@ -99,6 +104,8 @@ button:hover {
   100% { color: var(--white); font-size: 20px;  }
 }
 
+
+/*Loanding ====================================================*/
 .loading {
   font-size: 22px;
   font-weight: 700;
@@ -117,6 +124,8 @@ button:hover {
 
 }
 
+
+/*Título =================================================== */
 .title {
   font-size: 16px;
   font-weight: 300;
@@ -127,6 +136,8 @@ button:hover {
   margin-bottom: 20px;
 }
 
+
+/*Lista ==================================================== */
 ul {
   width: 70vw;
   height: 60vh;
@@ -147,6 +158,12 @@ li {
 
 }
 
+.mini-folder {
+  width: 32px;
+  height: 44px;
+  object-fit: cover;
+}
+
 .select {
   font-size: 14px;
   font-weight: 300;
@@ -162,19 +179,121 @@ li {
   color: var(--black);
 }
 
-.folder {
-  width: 32px;
-  height: 44px;
-  object-fit: cover;
-}
 
-.dataMovie {
+/*Filme ======================================*/
+.movie {
   width: 70vw;
   height: 60vh;
   margin: auto;
-  
 }
 
+.header-movie {
+  display: flex;
+}
+
+.name-movie {
+  width: 95vw;
+}
+
+.watching {
+  width: 5vw;
+  margin-left: 5px;
+  text-align: center;
+  }
+
+.watching::after {
+  /*content: '\2606';*/
+  content: '\002b';
+  color: var(--primary-dark);
+  font-size: 36px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.watching:hover:after {
+  content: "\2605";
+}
+
+hr {
+  margin-top: 10px; 
+  margin-bottom: 20px;
+}
+
+.data-movie {
+  display: flex;
+}
+
+.itens {
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 0; 
+  margin-right: 20px;
+}
+
+.item {
+  height: 5vh;
+  padding-bottom: 10%;
+}
+
+label {
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+span {
+  font-weight: 300;
+}
+
+.certificate {
+  display: flex;
+  height: 16vh;
+
+  align-items: flex-end;
+}
+
+.image-certificate {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+
+  border: 1px solid var(--white);
+  border-radius: 5px;
+}
+
+p {
+  font-weight: 300;
+}
+
+.folder {
+  margin: auto;
+  margin-right: 0;
+}
+
+img {
+  width: 162px;
+  height: 254px;
+  object-fit: cover;
+
+
+  box-shadow: 2px 3px 3px rgba(255,255,255,0.05);
+}
+
+@media only screen and (max-width: 768px) {
+  .data-movie {
+    flex-direction: column-reverse;
+  }
+
+  .itens {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .folder {
+    margin: auto;
+    /*align-content: right;*/
+  }
+}
 
 
 .shadow { display: none; }
