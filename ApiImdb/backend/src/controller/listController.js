@@ -50,9 +50,19 @@ module.exports = {
               imageList.push(arrayImage[i].src)
             }
 
+          
+            //Junta os dados em um objeto
+            let list = []
 
-           
-            const list = [length, nameList, linkList, imageList]
+            for (let i = 0; i < length; i++) {
+              list.push({
+                name: nameList[i],
+                link: linkList[i],
+                image: imageList[i]
+              })
+            }
+
+          //const list = [length, nameList, linkList, imageList]
             
             return list
         });

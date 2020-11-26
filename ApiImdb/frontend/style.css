@@ -114,7 +114,7 @@ button:hover {
 
   text-align: center;
 
-  animation: load 4s 2s infinite alternate ease-in-out; 
+  animation: load 4s infinite alternate ease-in-out; 
   /*animation-name: load;*/
   /*animation-duration: 4s;*/
   /*animation-delay: 2s;*/
@@ -276,8 +276,32 @@ img {
   object-fit: cover;
 
 
-  box-shadow: 2px 3px 3px rgba(255,255,255,0.05);
+  box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.05);
 }
+
+/* Alert */
+.swal-modal {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid gray;
+}
+
+.swal-text, .swal-title {
+  color: var(--white);
+}
+
+.swal-button--confirm {
+  width: 60px;
+  height: 40px;
+  padding: 0px ;
+
+  background-color: var(--primary-dark);
+  color: var(--black);
+  
+  border: none;
+  outline: none;
+}
+
+
 
 @media only screen and (max-width: 768px) {
   .data-movie {
