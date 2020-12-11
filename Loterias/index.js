@@ -2,8 +2,9 @@
 const numbers = []
 let sequence = []
 let cont = 1
-let sumVet = []
+let sumVet = [] 
 let oldVet = [1]
+let lastNum = 0 
 
 //const name = document.querySelector('.nome')
 
@@ -143,7 +144,8 @@ function teste2() {
   
   if (teste == true) {
     teste3()
-    /*console.log(cont + ") " + sequence)
+    /*let somas = sequence.reduce((value, total) => total + value)
+    console.log(cont + ") " + sequence + " (" + somas + ")")
     cont++*/
   } 
   /*else {
@@ -155,12 +157,15 @@ function teste2() {
 function teste3() {
   let soma = sequence.reduce((sum, value) => sum + value)
 
-  /*if (sequence[0] == oldVet[0]) {
-    oldVet[0]++
-    sumVet.splice(0, 1)
-  }*/
+  /*if (sequence[0] == oldVet[0]) {*/
+  //if (sequence[sequence.length - 1] < lastNum) {
+    //oldVet[0]++
+    //lastNum = sequence[sequence.length - 1]
+    //sumVet = []
+    //sumVet.splice(0, 1)
+  //}
 
-  if (sumVet.every(value => value != soma)) {
+  if (sumVet.every(value => soma != value)) {
     
     sumVet.push(soma)
     
