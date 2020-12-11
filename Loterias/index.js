@@ -2,13 +2,16 @@
 const numbers = []
 let sequence = []
 let cont = 1
+let sumVet = []
+let oldVet = [1]
+
 //const name = document.querySelector('.nome')
 
 
 function getNumbers() {
    let inc = 1
    
-   while (inc <= 60) {
+   while (inc <= 5) {
        numbers.push(inc)
        inc++
    }
@@ -25,7 +28,7 @@ function sorteio() {
     switch (option) {
         case 15: {
             console.log(15 + ' OK')
-            getSequence(6)
+            getSequence(3)
             break
         }
         case 16: {
@@ -88,11 +91,7 @@ function getSequence(num) {
         //testSequence()
         teste2()
 
-      /*if (teste2()) {
-        console.log(inc + ") " + sequence)
-        inc++
-      }*/
-
+      
         /*console.log(inc + ") " + sequence)
         inc++*/
         sequence[num-sub1]++
@@ -123,17 +122,17 @@ function teste2() {
   let teste
 
 
-    for (let inc2 = 0; inc2 <= (sequence.length - 1); inc2++) {
-      //console.lo\g(sequence)
-      let vet = sequence.filter((value, index) =>  {
-        if (index != inc2) {
-          return value
-        } 
-      })
-      //console.log(vet)
+  for (let inc2 = 0; inc2 <= (sequence.length - 1); inc2++) {
+    //console.lo\g(sequence)
+    let vet = sequence.filter((value, index) =>  {
+      if (index != inc2) {
+        return value
+      } 
+    })
+    //console.log(vet)
 
-      let result = vet.every(value => sequence[inc2] != value)
-       if (result == true) {
+    let result = vet.every(value => sequence[inc2] != value)
+      if (result == true) {
         teste = result 
       }
       else {
@@ -142,16 +141,35 @@ function teste2() {
       }
   }
   
-
   if (teste == true) {
-    console.log(cont + ") " + sequence)
-    cont++
+    teste3()
+    /*console.log(cont + ") " + sequence)
+    cont++*/
   } 
   /*else {
     console.log('erro') 
   }*/
 }
 
+
+function teste3() {
+  let soma = sequence.reduce((sum, value) => sum + value)
+
+  /*if (sequence[0] == oldVet[0]) {
+    oldVet[0]++
+    sumVet.splice(0, 1)
+  }*/
+
+  if (sumVet.every(value => value != soma)) {
+    
+    sumVet.push(soma)
+    
+    console.log(cont + ") " + sequence)
+    //console.log(sumVet)
+    cont++
+  }
+  
+}
 
 //console.log(getNumbers())
 console.log(sorteio())
