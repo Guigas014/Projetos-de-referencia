@@ -51,9 +51,10 @@ searchButton.onclick = async function getContent() {
   renderList(response)
 
   console.log(response)
-
-}
  
+}
+
+
 
 //renderiza a lista
 function renderList(data) {
@@ -73,7 +74,13 @@ function renderList(data) {
 
     let select = document.createElement('div')
     select.setAttribute('class', 'select')
+    select.addEventListener("click", getMovie)
     select.appendChild(document.createTextNode(item.name))
+
+    let url = document.createElement('span')
+    url.hidden = true
+    url.innerText = item.link
+    select.appendChild(url)
 
     let itemList = document.createElement('li')
     itemList.appendChild(folder)
@@ -86,7 +93,8 @@ function renderList(data) {
 
 
 
-
 //Busca o filme selecionado
-
+function getMovie(obj) {
+  console.log(obj.target.childNodes[1].innerText)
+}
 
