@@ -39,6 +39,7 @@ module.exports = {
             let linkList = [] 
 
             for (let i = 0; i < length; i++) {
+              if (arrayLink[i].href.endsWith('a') == false)
               linkList.push(arrayLink[i].href)
             }
 
@@ -63,7 +64,6 @@ module.exports = {
             }
 
           //const list = [length, nameList, linkList, imageList]
-            
             return list
         });
         

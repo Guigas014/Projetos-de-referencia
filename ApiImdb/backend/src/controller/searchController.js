@@ -13,11 +13,16 @@ module.exports = {
     // Validar a página buscando o valor 'Title'
     const data = await page.evaluate(() => {
       
+      if (document.querySelector('.title_wrapper').childNodes.length != 7) {
+        return 'error' 
+      }
+
+      datas = document.querySelector('.title_wrapper').childNodes 
+  
       const rate = document.querySelector('.ratingValue span')
 
-      const image = document.querySelector('.poster img').src
-      
-      const datas = document.querySelector('.title_wrapper').childNodes
+      const image = document.querySelector('.poster img').src 
+     
 
       const array = [ ...datas ]
       const movie = array.map(({ innerText }) => ( innerText ))
@@ -50,6 +55,7 @@ module.exports = {
     
     
     console.log('Fechou02')
+    //console.log(data)
     await browser.close()
     
     return data
