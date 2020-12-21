@@ -152,10 +152,126 @@ function renderMovie(data) {
   header.appendChild(headerTitle)
   header.appendChild(fav)
 
+  //HR
+  const hr = document.createElement('hr')
+  
+  //Data movie
+  const labels = {
+    'Título Original': data.originalTitle, 
+    Duração: data.time, 
+    Gênero: data.genres, 
+    IMDB: data.rate
+  }
 
+  const dataMovie = document.createElement('div')
+  dataMovie.setAttribute('class', 'data-movie')
+
+  const items = document.createElement('div')
+  items.setAttribute('class', 'itens')
+
+  //Item
+  Object.entries(labels).forEach(([key, value]) => {
+    const item = document.createElement('div')
+    item.setAttribute('class', 'item')
+  
+    const label = document.createElement('label')
+    label.appendChild(document.createTextNode(key + ':'))
+
+    const content = document.createElement('span')
+    let name = data.key
+    content.appendChild(document.createTextNode(value))
+
+    item.appendChild(label)
+    item.appendChild(content)
+    items.appendChild(item)
+
+  })
+  
+  //Certificate(items)
+  const age = {
+    'Livre': 'free',
+    10: 'ten',
+    12: 'twelves',
+    14: 'fourteen',
+    16: 'sixteen',
+    18: 'eighteen'
+  } 
+
+  const certification = document.createElement('div')
+  certification.setAttribute('class', 'certificate')
+
+  //Image
+  const ageImg = document.createElement('img')
+  ageImg.setAttribute('class', 'image-certificate')
+  ageImg.setAttribute('alt', 'Classificação Indicativa')
+
+  Object.entries(age).map(([key, value]) => {
+    if (key == data.certificate) {
+      ageImg.setAttribute('src', `./images/certificated/${value}.png`)
+    }  
+  })
+
+  certification.appendChild(ageImg)
+
+  //Text
+  const ageText = document.createElement('p')
+  if (data.certificate != 'Livre') {
+    ageText.appendChild(document.createTextNode(`Inadequado para menores de ${data.certificate} anos`))
+  }
+  else {
+    ageText.appendChild(document.createTextNode('Livre para todos os públicos'))
+  }
+
+  certification.appendChild(ageText)
   
 
+  items.appendChild(certification)
+  dataMovie.appendChild(items)
+  
+
+  //Folder(dataMovie)
+  const folder = document.createElement('div')
+  folder.setAttribute('class', 'folder')
+
+  const imgFolder = document.createElement('img')
+  imgFolder.setAttribute('alt', 'Folder')
+  imgFolder.setAttribute('src', data.image)
+
+  folder.appendChild(imgFolder)
+  dataMovie.appendChild(folder)
+  
+  ///HR1
+  const hr1 = document.createElement('hr')
+
+  //Navigation
+  const navBar = document.createElement('div')
+  navBar.setAttribute('class', 'navBar')
+
+  //Back
+  const backButton = document.createElement('div')
+  backButton.setAttribute('class', 'backButton')
+  backButton.appendChild(document.createTextNode('VOLTAR AOS TÍTULOS'))
+  backButton.addEventListener("click", backList)
+  
+  //Favorites
+  const favButton = document.createElement('a')
+  favButton.setAttribute('class', 'favButton')
+  favButton.setAttribute('href', './favorites.html')
+  favButton.appendChild(document.createTextNode('FAVORITOS'))
+
+  navBar.appendChild(backButton)
+  navBar.appendChild(favButton)
+
+
   movie.appendChild(header)
+  movie.appendChild(hr)
+  movie.appendChild(dataMovie)
+  movie.appendChild(hr1)
+  movie.appendChild(navBar)
 }
 
+function backList() {
+  movie.classList.replace('movie', 'shadow')
+  list.setAttribute('class', '')
+}
 

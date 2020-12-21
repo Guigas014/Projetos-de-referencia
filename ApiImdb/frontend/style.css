@@ -202,8 +202,7 @@ li {
   }
 
 .watching::after {
-  /*content: '\2606';*/
-  content: '\002b';
+  content: '\2606';
   color: var(--primary-dark);
   font-size: 36px;
 
@@ -278,6 +277,40 @@ img {
 
   box-shadow: 2px 3px 3px rgba(255, 255, 255, 0.05);
 }
+
+.navBar { display: flex;  }
+
+.backButton {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--primary);
+
+  margin-bottom: 20px;
+  width: 50vw;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.favButton {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--primary);
+  text-decoration: none;
+
+  margin-bottom: 20px;
+  width: 50vw;
+  text-align: right;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.backButton:hover, .favButton:hover {
+  color: var(--black);
+}
+
+
 
 /* Alert */
 .swal-modal {

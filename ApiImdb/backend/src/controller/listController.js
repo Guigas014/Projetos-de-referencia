@@ -38,9 +38,10 @@ module.exports = {
             const arrayLink = [ ...dataLink ]
             let linkList = [] 
 
-            for (let i = 0; i < length; i++) {
-              if (arrayLink[i].href.endsWith('a') == false)
-              linkList.push(arrayLink[i].href)
+            for (let i = 0; i < arrayLink.length; i++) {
+              if (arrayLink[i].href.endsWith('a') == false) {
+                linkList.push(arrayLink[i].href)
+              }
             }
 
             //Lista as imagens

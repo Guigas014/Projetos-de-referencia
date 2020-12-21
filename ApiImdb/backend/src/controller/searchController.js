@@ -17,7 +17,7 @@ module.exports = {
         return 'error' 
       }
 
-      datas = document.querySelector('.title_wrapper').childNodes 
+      const datas = document.querySelector('.title_wrapper').childNodes 
   
       const rate = document.querySelector('.ratingValue span')
 
