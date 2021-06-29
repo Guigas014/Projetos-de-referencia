@@ -98,12 +98,6 @@ button:hover {
   float: center;
 }
 
-@keyframes load {
-  0% { color: var(--primary); }
-  50% { color: var(--primary-dark); font-size: 21px;  }
-  100% { color: var(--white); font-size: 20px;  }
-}
-
 
 /*Loanding ====================================================*/
 .loading {
@@ -122,6 +116,12 @@ button:hover {
   /*animation-direction: alternate;*/
   /*animation-timing-function: ease-in-out;*/
 
+}
+
+@keyframes load {
+  0% { color: var(--primary); }
+  50% { color: var(--primary-dark); font-size: 21px;  }
+  100% { color: var(--white); font-size: 20px;  }
 }
 
 
