@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PersonalForms</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+
+  <body class= "h-screen grid items-center justify-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="
+        inline
+        text-3xl font-extrabold tracking-tight text-gray-900
+        sm:text-4xl sm:block
+      ">
+        Faça parte da minha
+      </h1>
+      <h2 class="
+        inline
+        text-3xl font-extrabold tracking-tight text-pink-500
+        sm:text-4xl sm:block
+      ">
+        lista de amigos
+      </h2>
+
+      <form 
+        class="mt-8 sm:flex" 
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe8pLlHpNietZ3wTGuCudvhFZHfkj-U9caqR5aFueQmPOFaRg/formResponse"
+      >
+        <label for="insta-friend" class="sr-only">Digite seu arroba</label>
+        <input 
+        class="
+          border border-gray-300 rounded-md
+          px-5 py-3 w-full
+          focus:outline-none focus:ring-pink-500 focus:border-pink-500
+        " 
+        id="insta-friend"
+        type="text"
+        name="entry.707432403"
+        placeholder="Digiteo seu @"
+        required
+        >
+        <div class="mt-3 sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+          <button class="
+            bg-pink-500 text-white
+            rounded-md
+            flex items-center justify-center
+            px-5 py-3 w-full
+            hover:bg-pink-600
+            focus:outline-none
+            focus:ring-2 focus:ring-offset-2 focus:ring-pink-500
+          ">
+            Solicitar
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
