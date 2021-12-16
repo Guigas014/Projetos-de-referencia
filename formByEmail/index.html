@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Envio de Formulário</title>
+  </head>
+
+  <body>
+    <form action="https://formsubmit.co/meuEmail@gmail.com" method="POST">
+
+      <input type="hidden" name="_next" value="http://127.0.0.1:8080/sucesso.html" />
+      
+      <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem!" />
+      
+      <input type="text" name="name" placeholder="Nome" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="text" name="subject" placeholder="Assunto" />
+      <textarea name="message" placeholder="Mensagem"></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+
+</html>
