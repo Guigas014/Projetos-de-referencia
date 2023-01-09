@@ -1,6 +1,7 @@
 import { useCallback, useState, useEffect } from 'react';
 import { FlatList, Text, View } from 'react-native';
 import AsyncStorage, { useAsyncStorage } from '@react-native-async-storage/async-storage';
+import Toast from 'react-native-toast-message';
 
 import { Card, CardProps } from '../../components/Card';
 import { HeaderHome } from '../../components/HeaderHome';
@@ -12,7 +13,7 @@ import { Button } from '../../components/Button';
 export function Home() {
   const [data, setData] = useState<CardProps[]>([]);
 
-  const { getItem, setItem } = useAsyncStorage("@savepass:passwords");  
+  const { getItem, setItem, removeItem } = useAsyncStorage("@savepass:passwords");  
 
 
   async function handleFetchData() {
@@ -32,6 +33,26 @@ export function Home() {
     setItem(JSON.stringify(data)); 
     setData(data);
   }
+
+  async function handleRemoveAll() {
+    const response = await getItem();
+    
+    if (response === null) {
+      removeItem(); 
+      setData(data);
+      
+      Toast.show({
+        type: "success",
+        text1: "Lista apagada!!"
+      });
+    }
+        
+    Toast.show({
+      type: "info",
+      text1: "A lista já está vazia!"
+    });
+  }
+
 
 
   //A tela será atualiza quando aparecer. 
@@ -71,6 +92,7 @@ export function Home() {
       <View style={styles.footer}>
         <Button
           title="Limpar lista"
+          onPress={() => handleRemoveAll()}
         />
       </View>
     </View>

@@ -16,6 +16,6 @@ export const styles = StyleSheet.create({
   footer: {
     width: '100%',
     padding: 24,
-    marginBottom: getBottomSpace() + 24
+    marginBottom: getBottomSpace()
   }
 });

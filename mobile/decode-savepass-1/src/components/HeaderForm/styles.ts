@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
     padding: 24,
-    paddingTop: getStatusBarHeight() + 24,
+    paddingTop: getStatusBarHeight(),
     marginBottom: 24
   },
   form: {
