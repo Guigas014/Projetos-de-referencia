@@ -20,4 +20,7 @@ usando o ASYNCSTORAGE do pacote react-native-async-storage.
 Abre um video do youtube, usando o ID do vídeo, com todas as funcionalidades
 do player do Youtube. E conserta a dimensão do vídeo ao girar o celular.
 
+## NATIVEGOOGLEMAPS
+
+Um mapa com posicionamento em tempo real, com marcador e rota.
 
