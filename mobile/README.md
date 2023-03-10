@@ -24,3 +24,7 @@ do player do Youtube. E conserta a dimensão do vídeo ao girar o celular.
 
 Um mapa com posicionamento em tempo real, com marcador e rota.
 
+## AUTHLOCAL
+
+Autenticação local usando a biometria no android.
+
