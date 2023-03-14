@@ -28,3 +28,7 @@ Um mapa com posicionamento em tempo real, com marcador e rota.
 
 Autenticação local usando a biometria no android.
 
+## GESTOSANIMACOES
+
+Aniumações feitas com react-native-animated e ativadas com react-native-gesture-handler.
+Componete feito e animado com Skia.
