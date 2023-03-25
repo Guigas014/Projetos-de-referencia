@@ -36,3 +36,8 @@ Componete feito e animado com Skia.
 ## AUDIOAPP
 
 Grava áudio e reproduzo áudio.
+
+## SORTLISTAPP
+
+Lista de blocos que são colocadas em ordem pelo movimento de PAN do usuário.
+
