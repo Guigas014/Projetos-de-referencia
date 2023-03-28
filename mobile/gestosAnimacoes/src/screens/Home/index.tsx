@@ -73,7 +73,7 @@ export function Home() {
         scale.value = event.scale; 
       })
 
-    //Cria o gesto. Nesse caso "pinça".
+    //Cria o gesto. Nesse caso "carregar".
     const onPan = Gesture
       .Pan()
       .onStart(() => {
