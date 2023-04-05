@@ -41,3 +41,7 @@ Grava áudio e reproduzo áudio.
 
 Lista de blocos que são colocadas em ordem pelo movimento de PAN do usuário.
 
+## FACEDETECTOR
+
+Ativa a camera, detecta a face de uma pessoa e coloca um emoji na tela conforme a expressão da face. 
+
