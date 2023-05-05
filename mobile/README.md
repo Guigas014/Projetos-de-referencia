@@ -49,4 +49,9 @@ Ativa a camera, detecta a face de uma pessoa e coloca um emoji na tela conforme 
 
 Animações feitas com keyframes (como no css), através do react-native-reanimated.
 
+## CLIPBOARDAPP
+
+Maneira de copiar e colar, texto ou imagem,  de qualquer aplicativo para dentro do app.
+E colocar o texto de um input do app para a area de transferência (clipboard).
+
 
