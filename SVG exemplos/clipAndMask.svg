@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="no"?>
+
+<!-- CLIP -->
+<!-- <svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  	É a area aonde vai manter a imagem.
+    <clipPath id="cut-off-bottom">
+      <rect x="0" y="0" width="200" height="100" />
+    </clipPath>
+  </defs>
+
+  <circle cx="100" cy="100" r="100" fill="red" clip-path="url(#cut-off-bottom)" />
+</svg> -->
+
+
+<!-- MASKING -->
+<!-- <svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="Gradient">
+      <stop offset="0" stop-color="black" />
+      <stop offset="1" stop-color="white" />
+    </linearGradient>
+    <mask id="Mask">
+      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
+    </mask>
+  </defs>
+
+  <rect x="0" y="0" width="200" height="200" fill="green" />
+  <rect x="0" y="0" width="200" height="200" fill="red" mask="url(#Mask)" />
+</svg> -->
+
+<!-- TRANSPARENCY WITH OPACITY -->
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="0" y="0" width="200" height="200" fill="blue" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    stroke="yellow"
+    stroke-width="40"
+    stroke-opacity=".5"
+    fill="red" />
+</svg>

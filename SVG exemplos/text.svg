@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Basics
+
+The x and y attributes determine where in the viewport the text will appear. The attribute text-anchor, which can have the values "start", "middle", "end" or "inherit", decides in which direction the text flows from this point. The attribute dominant-baseline decides the vertical alignment.
+
+Like with the shape elements, text can be colorized with the fill attribute and given a stroke with the stroke attribute. Both may also refer to gradients or patterns, which makes coloring text in SVG very powerful.
+
+Setting font properties
+An essential part of a text is the font in which it is displayed. SVG offers a set of attributes, many similar to their CSS counterparts, to enable font selection. Each of the following properties can be set as an attribute or via a CSS declaration: font-family, font-style, font-weight, font-variant, font-stretch, font-size, font-size-adjust, letter-spacing, word-spacing and text-decoration. -->
+
+
+<!-- TSPAN -->
+<!-- <svg width="350" height="60" xmlns="http://www.w3.org/2000/svg">
+  <text>
+    This is
+    <tspan rotate="30" font-weight="bold" fill="red">bold and red</tspan>
+  </text>
+
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
+</svg> -->
+
+<!-- TEXTPATH -->
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path id="my_path" d="M 20,20 C 80,80 100,40 120,20" fill="transparent" />
+  <text>
+    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" href="#my_path">
+      A curve.
+    </textPath>
+  </text>
+
+  <style>
+    <![CDATA[
+      text{
+        dominant-baseline: hanging;
+        font: 28px Verdana, Helvetica, Arial, sans-serif;
+      }
+    ]]>
+  </style>
+</svg>
+
