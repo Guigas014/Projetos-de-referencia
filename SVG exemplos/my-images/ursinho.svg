@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg width="200" height="200" style="background-color: #c4c4c4" xmlns="http://www.w3.org/2000/svg">
+      <!-- Orelhas -->
+      <circle cx="60" cy="55" r="15" stroke="black" stroke-width="1.8" fill="white" />
+      <circle cx="63" cy="59" r="9" stroke="black" stroke-width="1" fill="lightslategray" />
+      
+      <circle cx="140" cy="55" r="15" stroke="black" stroke-width="1.8" fill="white" />
+      <circle cx="137" cy="59" r="9" stroke="black" stroke-width="1" fill="lightslategray" />
+
+      <!-- Cabeça -->
+      <circle cx="100" cy="100" r="45" stroke="black" stroke-width="2.5" fill="white" />
+      
+      <!-- Bico -->
+      <circle cx="100" cy="120" r="25" stroke="black" stroke-width="2" fill="lightslategray" />
+
+      <!-- Olhos -->
+      <circle cx="82" cy="95" r="4" fill="black" />
+      <circle cx="81.5" cy="95.5" r="1" fill="white" />
+      
+      <circle cx="118" cy="95" r="4" fill="black" />
+      <circle cx="117.5" cy="95.5" r="1" fill="white" />
+      
+      <!-- Fucinho -->
+      <circle cx="100" cy="105" r="4" stroke="black" stroke-width="4" fill="white" />
+
+      <!-- Boca -->
+      <line x1="100" x2="100" y1="110" y2="135" stroke="black" stroke-width="1.5" />
+      <path d="M85 125 A30 20 90 0 0 115 125" stroke="black" stroke-width="1.8" fill="transparent" stroke-linecap="round" />
+</svg>

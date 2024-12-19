@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg width="200" height="200" style="background-color: #c4c4c4" xmlns="http://www.w3.org/2000/svg">
+
+<path d="M 100 25 A 30 30 0 0 0 100 175" fill="white" stroke="black" stroke-width="1.5" />
+<path d="M 100 25 A 30 30 0 0 1 100 175" fill="black" stroke="black" stroke-width="1.5"/>
+
+<circle cx="100" cy="63.5" r="37.5" fill="white" />
+<circle cx="100" cy="63.5" r="10" fill="black" />
+
+<circle cx="100" cy="138.5" r="37.5" fill="black" />
+<circle cx="100" cy="138.5" r="10" fill="white" />
+
+</svg>
