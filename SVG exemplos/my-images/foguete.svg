@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg width="200" height="200" style="background-color: #c4c4c4" xmlns="http://www.w3.org/2000/svg">
+
+      <g stroke="black" transform="translate(100, -40) rotate(45)">
+            <rect x="80" y="50" width="40" height="80" fill="yellow" />
+
+            <polygon points="80 48 100 18 120 48" fill="green" />
+            
+            <polygon points="78 120 78 95 64 120" fill="blue" />
+            <polygon points="122 120 122 95 136 120" fill="blue" />
+
+            <circle cx="100" cy="65" r="8" fill="cyan" />
+            <circle cx="100" cy="90" r="8" fill="cyan" />
+            <circle cx="100" cy="115" r="8" fill="cyan" />
+            
+            <g stroke="black" fill="coral">
+                  <!-- O poligono não precisa repetir o primeiro ponto para fechar o plano -->
+                  <!-- <polyline points="80 132 85 140 80 148 75 140 80 132" /> -->
+                  <polygon points="82 135 88 145 82 155 76 145" />
+                  <polygon points="82 135 88 145 82 155 76 145" transform="translate(36)" />
+                  <polygon points="82 135 88 145 82 155 76 145" transform="translate(18, 27)" />
+                  
+                  <polyline points="100 132 108 145 100 158 92 145 100 132" />
+            </g>
+      </g>
+      
+</svg>
