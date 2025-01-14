@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="no"?>
+
+<svg width="200" height="200" style="background-color: #c4c4c4" xmlns="http://www.w3.org/2000/svg">
+      <g 
+            transform="translate(5, 35)" 
+            stroke="black" 
+            stroke-linejoin="round" 
+            stroke-linecap="round"
+            fill="transparent"
+      >
+      <!-- Cabeça -->
+      <path d="M30 50 C35 42, 40 35, 65 25 L65 70 C60 70, 50 70, 30 50" />
+      
+      <!-- Boca -->
+      <path d="M36 55 C41 52, 46 58, 51 55" />
+
+      <!-- Olho -->
+      <ellipse cx="50" cy="38" rx="7" ry="9" fill="#C4C4C4" />
+      <rect x="47.8" y="36.8" width="4.3" height="4.3" fill="black" />
+      <path d="M45 39 Q50 33 55 39 Q50 45 45 39" stroke-width="0.8" />
+
+      <!-- Corpo Topo -->
+      <path 
+            d="M65 28 
+            C85 24, 105 22, 125 26 
+            C155 35, 160 60, 160 80
+            C155 120, 105 115, 105 90
+            C110 68, 132 68, 136 85
+            C138 105, 115 105, 112 90
+            C115 75, 128 75, 130 86
+            C130 96, 118 100, 118 88
+            C120 82, 124 82, 125 88"
+            stroke-linejoin="bevel"
+      />
+
+      <!-- Corpo Base -->
+      <path d="M65 68 L122 66 C145 73,138 90, 134 96" />
+
+      <!-- Patas -->
+      <path 
+            d="M85 50 90 62 82 85 79 80 73 84 78 64 75 55 A5 5 90 0 1 85 50"
+            fill="#C4C4C4" 
+      />
+
+      <path 
+            d="M85 50 L90 62 L82 85 L79 80 L73 84 L78 64 L75 55 A5 5 90 0 1 85 50"
+            stroke-width="1.4"
+            fill="#C4C4C4" 
+            transform="translate(45, 20) scale(.72)"
+      />
+
+      <!-- Espinhos -->
+      <path 
+            d="M65 28 L70 20 L75 26 L80 18 L85 25
+            L90 17 L95 24 L100 17 L105 24
+            L110 16 L115 24 L120 17 L125 26
+            L132 19 L135 30 L144 25 L145 37
+            L155 37 L152 46 L162 50 L157 56
+            L164 60 L159 66 L164 71 L160 75 
+            L163 79 L160 82"
+      />
+      </g>
+</svg>
