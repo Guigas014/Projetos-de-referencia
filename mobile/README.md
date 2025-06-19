@@ -8,12 +8,10 @@ Cria um ProgressBar que mostra o progressa de leitura de uma página,
 conforme o usuário rola o scroll. E também tem um botão de voltar
 para o top automaticamente.
 
-
 ## DECODE-SAVEPASS-1
 
 Procedimento para salvar dados em um armazenamento local no smartphone,
 usando o ASYNCSTORAGE do pacote react-native-async-storage.
-
 
 ## YTPLAYER
 
@@ -43,7 +41,7 @@ Lista de blocos que são colocadas em ordem pelo movimento de PAN do usuário.
 
 ## FACEDETECTOR
 
-Ativa a camera, detecta a face de uma pessoa e coloca um emoji na tela conforme a expressão da face. 
+Ativa a camera, detecta a face de uma pessoa e coloca um emoji na tela conforme a expressão da face.
 
 ## RNKEYFRAMES
 
@@ -51,7 +49,9 @@ Animações feitas com keyframes (como no css), através do react-native-reanima
 
 ## CLIPBOARDAPP
 
-Maneira de copiar e colar, texto ou imagem,  de qualquer aplicativo para dentro do app.
+Maneira de copiar e colar, texto ou imagem, de qualquer aplicativo para dentro do app.
 E colocar o texto de um input do app para a area de transferência (clipboard).
 
+## KAPP
 
+Estilização do icone, tanto no IOS como no Android. Configurando o modo dark, light e tinted do icone.
